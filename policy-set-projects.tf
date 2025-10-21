@@ -29,30 +29,30 @@ resource "tfe_project_policy_set" "s3_analytics" {
 }
 
 # RDS Policies - attached to all projects
-resource "tfe_project_policy_set" "rds_gaming" {
-  policy_set_id = tfe_policy_set.aws_rds.id
-  project_id    = tfe_project.gaming_core.id
-}
+# resource "tfe_project_policy_set" "rds_gaming" {
+#   policy_set_id = tfe_policy_set.aws_rds.id
+#   project_id    = tfe_project.gaming_core.id
+# }
 
-resource "tfe_project_policy_set" "rds_commerce" {
-  policy_set_id = tfe_policy_set.aws_rds.id
-  project_id    = tfe_project.commerce_core.id
-}
+# resource "tfe_project_policy_set" "rds_commerce" {
+#   policy_set_id = tfe_policy_set.aws_rds.id
+#   project_id    = tfe_project.commerce_core.id
+# }
 
-resource "tfe_project_policy_set" "rds_social" {
-  policy_set_id = tfe_policy_set.aws_rds.id
-  project_id    = tfe_project.social_core.id
-}
+# resource "tfe_project_policy_set" "rds_social" {
+#   policy_set_id = tfe_policy_set.aws_rds.id
+#   project_id    = tfe_project.social_core.id
+# }
 
-resource "tfe_project_policy_set" "rds_media" {
-  policy_set_id = tfe_policy_set.aws_rds.id
-  project_id    = tfe_project.media_core.id
-}
+# resource "tfe_project_policy_set" "rds_media" {
+#   policy_set_id = tfe_policy_set.aws_rds.id
+#   project_id    = tfe_project.media_core.id
+# }
 
-resource "tfe_project_policy_set" "rds_analytics" {
-  policy_set_id = tfe_policy_set.aws_rds.id
-  project_id    = tfe_project.analytics_core.id
-}
+# resource "tfe_project_policy_set" "rds_analytics" {
+#   policy_set_id = tfe_policy_set.aws_rds.id
+#   project_id    = tfe_project.analytics_core.id
+# }
 
 # EKS Policies - attached to all projects
 resource "tfe_project_policy_set" "eks_gaming" {
