@@ -28,3 +28,31 @@ output "org_collaborator_auth_policy" {
 #   description = "OAuth client name"
 #   value       = data.tfe_oauth_client.this.name
 # }
+
+# ==========================================
+# Team IDs for RBAC binding in later waves
+# ==========================================
+
+output "global_admins_team_id" {
+  description = "Team ID for global-admins (full org control)"
+  value       = tfe_team.global_admins.id
+}
+
+output "global_auditors_team_id" {
+  description = "Team ID for global-auditors (org read-only)"
+  value       = tfe_team.global_auditors.id
+}
+
+output "platform_admin_team_ids" {
+  description = "Map of domain name to platform admin team IDs"
+  value = {
+    for domain, team in tfe_team.platform_admins : domain => team.id
+  }
+}
+
+output "platform_admin_team_names" {
+  description = "Map of domain name to platform admin team names"
+  value = {
+    for domain, team in tfe_team.platform_admins : domain => team.name
+  }
+}
