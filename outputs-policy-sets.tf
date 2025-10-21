@@ -4,10 +4,10 @@ output "policy_set_s3_id" {
   value       = tfe_policy_set.aws_s3.id
 }
 
-# output "policy_set_rds_id" {
-#   description = "ID of the AWS RDS policy set"
-#   value       = tfe_policy_set.aws_rds.id
-# }
+output "policy_set_rds_id" {
+  description = "ID of the AWS RDS policy set"
+  value       = tfe_policy_set.aws_rds.id
+}
 
 output "policy_set_eks_id" {
   description = "ID of the AWS EKS policy set"
